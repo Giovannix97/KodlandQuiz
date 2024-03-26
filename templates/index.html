@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <style>
+        body {
+            position: relative;
+            min-height: 100vh;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Quiz</h1>
+    
+    <form method="post">
+        <!-- Question about the user's name -->
+        <h2>Domanda 1: Come ti chiami?</h2>
+        <input type="text" name="username">
+
+        <!-- First question with multiple choice -->
+        <h2>In che modo la visione computerizzata può essere utilizzata in ambito medico?</h2>
+        <input type="radio" name="question1" value="answer1"> Per rispondere alle e-mail<br>
+        <input type="radio" name="question1" value="answer2"> Per gestire al meglio le visite mediche e le prenotazioni<br>
+        <input type="radio" name="question1" value="answer3"> Per analizzare in maniera più efficiente immagini mediche e diagnosticare eventuali malattie<br>
+
+        <!-- Second question with multiple choice -->
+        <h2>La visione computerizzata potrebbe essere utilizzata per proteggere gli animali in via di estinzione?</h2>
+        <input type="radio" name="question2" value="answer1"> Si, insegnando agli animali come scappare dai predatori<br>
+        <input type="radio" name="question2" value="answer2"> No, non è affatto utile per questo scopo<br>
+        <input type="radio" name="question2" value="answer3"> Sì, riconoscendo gli animali nelle foto per monitorarne la popolazione<br>
+
+         <!-- Third question with multiple choice -->
+         <h2>Tra le seguenti opzioni, qual è una delle applicazioni pratiche della visione computerizzata?</h2>
+         <input type="radio" name="question3" value="answer1"> Analisi e studio dei mercati finanziari<br>
+         <input type="radio" name="question3" value="answer2"> Sviluppo di videogiochi<br>
+         <input type="radio" name="question3" value="answer3"> Riconoscimento facciale<br>
+
+        <!-- Fourth question with multiple choice -->
+        <h2>Cosa significa quando si parla di "addestramento" di un sistema di visione computerizzata?</h2>
+        <input type="radio" name="question4" value="answer1"> Ha fatto esercizio fisico<br>
+        <input type="radio" name="question4" value="answer2"> E' stato riparato<br>
+        <input type="radio" name="question4" value="answer3"> Ha appreso da esempi allo scopo di migliorarsi<br>
+        
+        <!-- Fifth question with multiple choice -->
+        <h2>Come può essere utilizzata la visione computerizzata in un aeroporto?</h2>
+        <input type="radio" name="question5" value="answer1"> Annunciando i voli<br>
+        <input type="radio" name="question5" value="answer2"> Non può essere utilizzata<br>
+        <input type="radio" name="question5" value="answer3"> Controllando i passaporti e riducendo l'intervento umano<br>
+                
+        <br>
+        <input type="submit" value="Invia risposte">
+
+        <div>
+            <p>Ciao <br> hai totalizzato <span id="current_score">{{ total_score }}</span> punti.</p>
+        </div>
+
+        <!-- User's best score in the top right corner -->
+        <div id="score" style="position: absolute; top: 10px; right: 10px;">
+            <p>Punteggio migliore: {{ best_score }}</p>
+        </div>
+    </form>
+
+    <!-- Footer with information about the author -->
+    <footer>
+        Giovanni Iacovazzo
+    </footer>
+</body>
+</html>
